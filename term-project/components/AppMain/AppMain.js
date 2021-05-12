@@ -1,21 +1,31 @@
-import styles from "./AppMain.module.css"
-import StoryCard from "./StoryCard/StoryCard"
+import React, { useEffect, useState } from "react";
 
-export default function AppMain(){
-    return(
-        <main role="main" className={styles.AppMain}>
-            <div className={styles.TopStoryMain}>
-                <StoryCard type="News"/>
-                <StoryCard />
-                <StoryCard />
-                <StoryCard />
-                <StoryCard />
-                <StoryCard />
-                <StoryCard />
-                <StoryCard />
-                <StoryCard />
-                <StoryCard />
-            </div>
-        </main>
-    );
+import styles from "./AppMain.module.css";
+import StoryCard from "./StoryCard/StoryCard";
+
+export default function AppMain() {
+  const [state, setState] = useState({
+    list: [],
+  });
+
+  useEffect(() => {
+    fetch("/api/news").then(async (res) => {
+      const resp = await res.json();
+      setState({
+        list: resp.data,
+      });
+    });
+  }, []);
+
+  return (
+    <main role="main" className={styles.AppMain}>
+      <div className={styles.TopStoryMain}>
+          {state.list.map((i)=>{
+              return(
+                <StoryCard data={i} />        
+              );
+          })}
+      </div>
+    </main>
+  );
 }

@@ -1,13 +1,13 @@
 import styles from "./StoryCard.module.css";
 import React, { useEffect, useState } from "react";
 
-function LikeButton() {
+function LikeButton(props) {
   const [isLike, setIsLike] = useState(0);
 
   if (isLike) {
+    
     return (
       <button
-        aria-label="赞同 674"
         type="button"
         className={styles.agreeBtn}
         onClick={() => setIsLike(0)}
@@ -26,13 +26,12 @@ function LikeButton() {
             ></path>
           </svg>
         </span>
-        &nbsp;已赞同 674
+        &nbsp;已赞同 {props.agreeCnt+1}
       </button>
     );
   }
   return (
     <button
-      aria-label="赞同 674"
       type="button"
       className={styles.agreeBtn}
       onClick={() => setIsLike(1)}
@@ -51,14 +50,14 @@ function LikeButton() {
           ></path>
         </svg>
       </span>
-      &nbsp;赞同 675
+      &nbsp;赞同 {props.agreeCnt}
     </button>
   );
 }
 
 export default function StoryCard(props) {
   function getType(){
-    if (props.type=="News"){
+    if (props.data.type=="News"){
       return "none";
     }else{
       return "block";
@@ -73,24 +72,22 @@ export default function StoryCard(props) {
     <div className={styles.card}>
       <div className={styles.feed}>
         <div className={styles.title}>
-          <a href="">如何用一句话激怒数竞党？</a>
+          <a href="">{props.data.question}</a>
         </div>
         <div className={styles.content}>
           <div className={styles.contentPic} style={{display : getType()}}>
             <div className={styles.contentPicInner}>
-              <img src="https://pic4.zhimg.com/50/v2-d7a9537446e8aafeb0c5feb8cce72fc5_400x224.jpg" alt="cover"></img>
+              <img src={props.data.imgUrl} alt="cover"></img>
             </div>
           </div>
           <div className={styles.contentInner}>
             <span className={styles.contentText}>
-              momo： 一、高考数学 数学成绩好：
-              “数学成绩这么好怎么还天天搞数学，偏科怎么办，明明成绩挺好的，心思咋没放在高考上呢，一定要走捷径。”
-              数学成绩差： “…
+              {props.data.author}： {props.data.content}
             </span>
           </div>
           <div className={styles.contentActions}>
             <span>
-              <LikeButton></LikeButton>
+              <LikeButton agreeCnt={props.data.agreeCnt}/>
               <button type="button" className={styles.disagreeBtn}>
                 <span
                   style={({ display: "inline-flex" }, { alignItems: "center" })}
@@ -127,7 +124,7 @@ export default function StoryCard(props) {
                   ></path>
                 </svg>
               </span>
-              &nbsp;评论 5
+              &nbsp;评论 {props.data.commentsCnt}
             </button>
             <button type="button" className={styles.withBtn}>
               <span
