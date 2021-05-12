@@ -10,7 +10,7 @@
   transform: translateY(0);
   overflow: hidden;
   box-shadow: 0 1px 3px 0 rgb(23 81 153 / 5%);
-  border-bottom: 1px solid rgba(27, 27, 27, 0.06);
+  border-bottom: 1px solid rgba(18,18,18,.06);
   display: block;
 }
 
