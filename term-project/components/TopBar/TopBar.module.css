@@ -1,0 +1,114 @@
+.topBarContainer {
+  line-height: 50px;
+  width: 375.2px;
+  top:0px;
+  left: 0px;
+  box-sizing: border-box;
+  position: fixed;
+  background-clip: content-box;
+  min-width: 100%;
+  transform: translateY(0);
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgb(23 81 153 / 5%);
+  border-bottom: 1px solid rgba(27, 27, 27, 0.06);
+  display: block;
+}
+
+.topBar {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 52px;
+  line-height: 50px;
+}
+
+.logo{
+  -webkit-box-align: center;
+  align-items: center;
+  padding-left: 16px;
+  display: inline-flex;
+}
+
+.actions{
+  flex-shrink: 0;
+  display: flex;
+  font-size: 16px;
+  color: #06f;
+  align-items: center;
+}
+
+.searchBox{
+  width: calc(100vw - 245px);
+  margin: 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  padding-right: 0;
+  padding-left: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 16px;
+  height: 32px;
+  color: #999;
+  background-color: hsla(0, 0%, 92.2%, .72);
+  position: relative;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+}
+
+.ziSearch{
+  margin-right: 4px;
+}
+
+.input{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #121212;
+  height: 24px;
+  line-height: 24px;
+  -webkit-box-flex: 1;
+  flex: 1 1;
+  padding: 0;
+  background: transparent;
+  border: none;
+  resize: none;
+}
+
+.downloadLink{
+  position: relative;
+  padding-right: 16px;
+  color: inherit;
+}
+
+.downloadLink::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 0;
+  height: 16px;
+  border-left: 1px solid #ebebeb;
+}
+
+.moreIcon{
+  position: relative;
+  margin: 0 16px;
+  text-align: center;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-pack: center;
+  padding-top: 10px;
+  line-height: 40px;
+}
+
+.expandBtn.expandBtn{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+}
