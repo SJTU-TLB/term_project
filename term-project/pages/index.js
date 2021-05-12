@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-
 import TopBar from "../components/TopBar/TopBar";
-import styles from "../components/AppMain/AppMain.module.css"
+import styles from "../components/AppMain/AppMain.module.css";
 
 export default function Home() {
   const [state, setState] = useState({
@@ -18,15 +17,12 @@ export default function Home() {
     });
   }, []);
 
-
-
   return (
     <>
       <TopBar />
       <main role="main" className={styles.AppMain}>
         <div className={styles.TopStoryMain}>
           <div className={styles.container}>
-            { }
             {state.list.map((i) => {
               switch (i.type) {
                 case "News":
@@ -39,9 +35,7 @@ export default function Home() {
                         <div className={styles.content}>
                           <div className={styles.contentInner}>
                             <span className={styles.contentText}>
-                              {i.author}
-                              :
-                              {i.content}
+                              {i.author}:{i.content}
                             </span>
                           </div>
                           <div className={styles.contentActions}>
@@ -52,7 +46,10 @@ export default function Home() {
                                 className={styles.agreeBtn}
                               >
                                 <span
-                                  style={({ display: "inline-flex" }, { alignItems: "center" })}
+                                  style={
+                                    ({ display: "inline-flex" },
+                                    { alignItems: "center" })
+                                  }
                                 >
                                   <svg
                                     className={styles.agreeBtnIcon}
@@ -67,11 +64,17 @@ export default function Home() {
                                     ></path>
                                   </svg>
                                 </span>
-                &nbsp;赞同 674
-              </button>
-                              <button type="button" className={styles.disagreeBtn}>
+                                &nbsp;赞同 674
+                              </button>
+                              <button
+                                type="button"
+                                className={styles.disagreeBtn}
+                              >
                                 <span
-                                  style={({ display: "inline-flex" }, { alignItems: "center" })}
+                                  style={
+                                    ({ display: "inline-flex" },
+                                    { alignItems: "center" })
+                                  }
                                 >
                                   <svg
                                     className={styles.disagreeBtnIcon}
@@ -90,7 +93,10 @@ export default function Home() {
                             </span>
                             <button type="button" className={styles.commentBtn}>
                               <span
-                                style={({ display: "inline-flex" }, { alignItems: "center" })}
+                                style={
+                                  ({ display: "inline-flex" },
+                                  { alignItems: "center" })
+                                }
                               >
                                 <svg
                                   fill="currentColor"
@@ -105,11 +111,14 @@ export default function Home() {
                                   ></path>
                                 </svg>
                               </span>
-              &nbsp;评论 {i.commentsCount}
-            </button>
+                              &nbsp;评论 {i.commentsCount}
+                            </button>
                             <button type="button" className={styles.withBtn}>
                               <span
-                                style={({ display: "inline-flex" }, { alignItems: "center" })}
+                                style={
+                                  ({ display: "inline-flex" },
+                                  { alignItems: "center" })
+                                }
                               >
                                 <svg
                                   fill="currentColor"
@@ -128,7 +137,10 @@ export default function Home() {
                             <div className="actionBtn">
                               <button type="button" className={styles.withBtn}>
                                 <span
-                                  style={({ display: "inline-flex" }, { alignItems: "center" })}
+                                  style={
+                                    ({ display: "inline-flex" },
+                                    { alignItems: "center" })
+                                  }
                                 >
                                   <svg
                                     fill="currentColor"
@@ -152,11 +164,10 @@ export default function Home() {
                   );
               }
             })}
-            { }
+            {}
           </div>
         </div>
       </main>
-
     </>
   );
 }

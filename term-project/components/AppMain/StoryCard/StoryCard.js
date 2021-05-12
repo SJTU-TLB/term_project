@@ -1,21 +1,43 @@
-
 import styles from "./StoryCard.module.css";
-import React,{ useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 function LikeButton() {
-  const [islike, setislike] = useState(0);
+  const [isLike, setIsLike] = useState(0);
 
-
-  if (islike) {
-    return (<button
+  if (isLike) {
+    return (
+      <button
+        aria-label="赞同 674"
+        type="button"
+        className={styles.agreeBtn}
+        onClick={() => setIsLike(0)}
+      >
+        <span style={({ display: "inline-flex" }, { alignItems: "center" })}>
+          <svg
+            className={styles.agreeBtnIcon}
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            width="10"
+            height="10"
+          >
+            <path
+              d="M 2 18.242 c 0 -0.326 0.088 -0.532 0.237 -0.896 l 7.98 -13.203 C 10.572 3.57 11.086 3 12 3 c 0.915 0 1.429 0.571 1.784 1.143 l 7.98 13.203 c 0.15 0.364 0.236 0.57 0.236 0.896 c 0 1.386 -0.875 1.9 -1.955 1.9 H 3.955 c -1.08 0 -1.955 -0.517 -1.955 -1.9 Z"
+              fillRule="evenodd"
+            ></path>
+          </svg>
+        </span>
+        &nbsp;已赞同 674
+      </button>
+    );
+  }
+  return (
+    <button
       aria-label="赞同 674"
       type="button"
       className={styles.agreeBtn}
-      onClick={() => setislike(0)}
+      onClick={() => setIsLike(1)}
     >
-      <span
-        style={({ display: "inline-flex" }, { alignItems: "center" })}
-      >
+      <span style={({ display: "inline-flex" }, { alignItems: "center" })}>
         <svg
           className={styles.agreeBtnIcon}
           fill="currentColor"
@@ -29,33 +51,9 @@ function LikeButton() {
           ></path>
         </svg>
       </span>
-    &nbsp;已赞同 674
-    </button>);
-  }
-  return (<button
-    aria-label="赞同 674"
-    type="button"
-    className={styles.agreeBtn}
-    onClick={() => setislike(1)}
-  >
-    <span
-      style={({ display: "inline-flex" }, { alignItems: "center" })}
-    >
-      <svg
-        className={styles.agreeBtnIcon}
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        width="10"
-        height="10"
-      >
-        <path
-          d="M 2 18.242 c 0 -0.326 0.088 -0.532 0.237 -0.896 l 7.98 -13.203 C 10.572 3.57 11.086 3 12 3 c 0.915 0 1.429 0.571 1.784 1.143 l 7.98 13.203 c 0.15 0.364 0.236 0.57 0.236 0.896 c 0 1.386 -0.875 1.9 -1.955 1.9 H 3.955 c -1.08 0 -1.955 -0.517 -1.955 -1.9 Z"
-          fillRule="evenodd"
-        ></path>
-      </svg>
-    </span>
-  &nbsp;赞同 675
-  </button>);
+      &nbsp;赞同 675
+    </button>
+  );
 }
 
 export default function StoryCard() {
@@ -75,8 +73,7 @@ export default function StoryCard() {
           </div>
           <div className={styles.contentActions}>
             <span>
-              <LikeButton>
-              </LikeButton>
+              <LikeButton></LikeButton>
               <button type="button" className={styles.disagreeBtn}>
                 <span
                   style={({ display: "inline-flex" }, { alignItems: "center" })}

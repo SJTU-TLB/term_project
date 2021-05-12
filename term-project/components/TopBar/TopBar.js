@@ -1,8 +1,21 @@
+import { useEffect } from "react";
 import styles from "./TopBar.module.css";
 
 export default function TopBar() {
+  useEffect(() => {
+    var elemScrollPos;
+    window.addEventListener("scroll",function(){
+      elemScrollPos = document.documentElement.scrollTop;
+      if (elemScrollPos>50){
+        document.getElementById("topBarContainer").style.display="none";
+      }else{
+        document.getElementById("topBarContainer").style.display="block";
+      }
+    })
+  });
+
   return (
-    <div className={styles.topBarContainer}>
+    <div className={styles.topBarContainer} id="topBarContainer">
       <div className={styles.topBar}>
         <a className={styles.logo}>
           <svg viewBox="0 0 64 30" fill="#0066FF" width="64" height="30">
