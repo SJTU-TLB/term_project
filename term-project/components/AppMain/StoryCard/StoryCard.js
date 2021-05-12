@@ -56,7 +56,19 @@ function LikeButton() {
   );
 }
 
-export default function StoryCard() {
+export default function StoryCard(props) {
+  function getType(){
+    if (props.type=="News"){
+      return "none";
+    }else{
+      return "block";
+    }
+  }
+
+  useEffect(() => {
+    
+  });
+
   return (
     <div className={styles.card}>
       <div className={styles.feed}>
@@ -64,6 +76,11 @@ export default function StoryCard() {
           <a href="">如何用一句话激怒数竞党？</a>
         </div>
         <div className={styles.content}>
+          <div className={styles.contentPic} style={{display : getType()}}>
+            <div className={styles.contentPicInner}>
+              <img src="https://pic4.zhimg.com/50/v2-d7a9537446e8aafeb0c5feb8cce72fc5_400x224.jpg" alt="cover"></img>
+            </div>
+          </div>
           <div className={styles.contentInner}>
             <span className={styles.contentText}>
               momo： 一、高考数学 数学成绩好：

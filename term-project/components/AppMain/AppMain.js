@@ -5,7 +5,7 @@ export default function AppMain(){
     return(
         <main role="main" className={styles.AppMain}>
             <div className={styles.TopStoryMain}>
-                <StoryCard />
+                <StoryCard type="News"/>
                 <StoryCard />
                 <StoryCard />
                 <StoryCard />
