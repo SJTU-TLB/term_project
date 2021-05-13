@@ -9,7 +9,7 @@ export function AnsUser(props) {
       <div className={styles.userContent}>
         <span>
           <a>
-            <Image
+            <img
               className={styles.avatar}
               src={props.avatar}
               width="38"
@@ -90,7 +90,7 @@ export function AnsComment(props) {
           <div className={styles.commentUser}>
             <span className={styles.cmtAvatar}>
               <a className={styles.cmtUserLInk}>
-                <Image
+                <img
                   className={styles.cmtAvatarImg}
                   src={props.secondary.commentUser1Avatar}
                   width="24"
@@ -116,7 +116,7 @@ export function AnsComment(props) {
           <div className={styles.commentUser}>
             <span className={styles.cmtAvatar}>
               <a className={styles.cmtUserLInk}>
-                <Image
+                <img
                   className={styles.cmtAvatarImg}
                   src={props.secondary.commentUser2Avatar}
                   width="24"
