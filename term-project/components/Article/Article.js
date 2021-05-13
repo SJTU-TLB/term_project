@@ -15,7 +15,7 @@ export default function Article(props) {
           <QuestionHeader question={props.data.question}></QuestionHeader>
           <div className={styles.ansCard}>
             <div className={styles.ansContentMain}>
-              <AnsUser user={props.data.author} info={props.data.info}></AnsUser>
+              <AnsUser user={props.data.author} info={props.data.info} avatar={props.data.authorAvatar}></AnsUser>
               <RichContent secondary={props.data.secondary}></RichContent>
               <ActionContent agreeCnt={props.data.agreeCnt} commentsCnt={props.data.commentsCnt}></ActionContent>
               <AnsComment secondary={props.data.secondary}></AnsComment>
