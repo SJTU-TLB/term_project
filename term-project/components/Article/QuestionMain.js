@@ -1,6 +1,7 @@
 import ActionContent from "./ActionContent";
 import styles from "./QuestionMain.module.css";
 import Image from "next/image";
+import React, { useState } from "react";
 
 export function AnsUser(props) {
   return (
@@ -33,11 +34,42 @@ export function AnsUser(props) {
   );
 }
 
+function Build(props) {
+  const [state, setState] = useState({
+    list: props.richContent,
+  });
+
+  return (
+    <>
+      {state.list.map((i) => {
+        if (i.type == "p") {
+          return (
+            <>
+              <p>{i.content}</p>
+              <br></br>
+            </>
+          );
+        }
+        if (i.type == "img") {
+          return (
+            <img
+              style={({ display: "block" }, { maxWidth: "100%" })}
+              src={i.content}
+            />
+          );
+        }
+      })}
+    </>
+  );
+}
+
 export function RichContent(props) {
   return (
     <div className={styles.richContent}>
       <div className={styles.richContentInner}>
-        <span className={styles.richText}>{props.secondary.richContent}</span>
+        <span className={styles.richText}>
+          <Build richContent={props.secondary.richContent}></Build>
+        </span>
       </div>
       <div>
         <div className={styles.contentTime}>
@@ -59,7 +91,6 @@ export function AnsComment(props) {
                 <Image
                   className={styles.cmtAvatarImg}
                   src={props.secondary.commentUser1Avatar}
-                  
                   width="24"
                   height="24"
                 />

@@ -15,7 +15,40 @@ export default (req, res) => {
         type: 'News',
         info: '西18-308南桐',
         secondary: {
-          richContent: '在DDL的前一天新建文件夹就完事了',
+          richContent: [
+            {
+              type: "p",
+              content: "这是第1个段落", 
+            },
+            {
+              type: "p",
+              content: "这是第2个段落", 
+            },
+            {
+              type: "img",
+              content: "https://pic1.zhimg.com/80/v2-00c4b440e1d878632ce506118e8f1573_1440w.jpg?source=1940ef5c", 
+            },
+            {
+              type: "p",
+              content: "这是第一个段落", 
+            },
+            {
+              type: "img",
+              content: "https://pic1.zhimg.com/80/v2-00c4b440e1d878632ce506118e8f1573_1440w.jpg?source=1940ef5c", 
+            },
+            {
+              type: "p",
+              content: "这是第4个段落", 
+            },
+            {
+              type: "p",
+              content: "这是第5个段落", 
+            },
+            {
+              type: "p",
+              content: "这是第6个段落", 
+            },
+          ],
           editTime : '05-14',
           commentUser1 :'赵子谦',
           commentUser1Avatar: '/avatars/comment1.png',
