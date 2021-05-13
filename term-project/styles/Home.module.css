@@ -8,6 +8,11 @@
   height: 100vh;
 }
 
+.second{
+  min-height: 100vh;
+  background: #f6f6f6;
+}
+
 .main {
   padding: 5rem 0;
   flex: 1;

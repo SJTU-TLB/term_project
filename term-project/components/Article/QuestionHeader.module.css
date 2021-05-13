@@ -1,0 +1,20 @@
+
+
+.QuestionHeadContent {
+    padding: 16px;
+    border-top: 0;
+    border-radius: 0;
+    border-width: 1px 0;
+    background-color: white;
+    margin-bottom: 10px;
+
+}
+.QuestionHeadTitle {
+    letter-spacing: 0;
+    line-height: 1.67;
+    text-align: left;
+    margin-top: 8px;
+    font-size: 20px;
+    color: #121212;
+    font-weight: 500;
+}

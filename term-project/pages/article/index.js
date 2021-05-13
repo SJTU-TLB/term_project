@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import TopBar from "../../components/TopBar/TopBar";
-import AppMain from "../../components/AppMain/AppMain";
+
+import QuestionHeader from "../../components/Article/QuestionHeader";
+import { ActionContent } from "../../components/Article/ActionContent";
+import Article from "../../components/Article/Article";
 
 export default function Home() {
   const [state, setState] = useState({
@@ -16,12 +19,13 @@ export default function Home() {
       });
     });
   }, []);
-  
-  
+
   return (
-  <>
-    <TopBar></TopBar>
-    <AppMain></AppMain>
-  </>
+    <>
+      <div >
+        <TopBar></TopBar>
+        <Article></Article>
+      </div>
+    </>
   );
 }

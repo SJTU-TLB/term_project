@@ -1,5 +1,6 @@
-import styles from "./StoryCard.module.css";
 import React, { useEffect, useState } from "react";
+
+import styles from "./ActionContent.module.css";
 
 function LikeButton(props) {
   const [isLike, setIsLike] = useState(0);
@@ -187,43 +188,6 @@ export function ActionContent(props) {
             </svg>
           </span>
         </button>
-      </div>
-    </div>
-  );
-}
-
-export default function StoryCard(props) {
-  function getType() {
-    if (props.data.type == "News") {
-      return "none";
-    } else {
-      return "block";
-    }
-  }
-
-  useEffect(() => {});
-
-  return (
-    <div className={styles.card}>
-      <div className={styles.feed}>
-        <div className={styles.title}>
-          <a href="">{props.data.question}*/</a>
-        </div>
-        <div className={styles.content}>
-          <div className={styles.contentPic} style={{ display: getType() }}>
-            <div className={styles.contentPicInner}>
-              <img src={props.data.imgUrl} alt="cover"></img>
-            </div>
-          </div>
-          <div className={styles.contentInner}>
-            <span className={styles.contentText}>
-              {props.data.author}： {props.data.content}
-            </span>
-          </div>
-          <ActionContent commentsCnt={props.data.commentsCnt} agreeCnt={props.data.agreeCnt}>
-
-          </ActionContent>
-        </div>
       </div>
     </div>
   );
