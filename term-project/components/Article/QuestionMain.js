@@ -1,6 +1,8 @@
 import ActionContent from "./ActionContent";
 import styles from "./QuestionMain.module.css";
 import Image from "next/image";
+import React, { useState } from "react";
+
 
 export function AnsUser(props) {
   return (
@@ -33,11 +35,40 @@ export function AnsUser(props) {
   );
 }
 
+
+function Build(props){
+  const [state, setState] = useState({
+    list: props.richContent,
+  });
+
+  return (
+    <>
+    {state.list.map((i)=>{
+      if(i.type == 'p'){
+        return(
+          <p>{i.children}</p>
+        );
+      }
+      if(i.type == 'img'){
+        return(
+          <img style={{display: "block"},{maxWidth: "100%"}} src={i.children}/>
+        )
+      }
+    })}
+  </>
+  );
+
+}
+
+
+
 export function RichContent(props) {
+
+
   return (
     <div className={styles.richContent}>
       <div className={styles.richContentInner}>
-        <span className={styles.richText}>{props.secondary.richContent}</span>
+        <span className={styles.richText}><Build richContent={props.secondary.richContent}></Build></span>
       </div>
       <div>
         <div className={styles.contentTime}>
