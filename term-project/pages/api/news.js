@@ -11,6 +11,7 @@ export default (req, res) => {
         agreeCnt: 1000,
         commentsCnt: 45,
         type: 'News',
+        key: '1',
       },
       {
         question: '计算机系学生应该怎样正确管理自己的电脑？',
@@ -20,6 +21,7 @@ export default (req, res) => {
         agreeCnt: 6006,
         commentsCnt: 180,
         type :'OnePic',
+        key: '2',
       },
       {
         question: '计算机系学生应该怎样正确管理自己的电脑？',

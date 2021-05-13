@@ -1,11 +1,11 @@
 import styles from "./StoryCard.module.css";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 function LikeButton(props) {
   const [isLike, setIsLike] = useState(0);
 
   if (isLike) {
-    
     return (
       <button
         type="button"
@@ -26,7 +26,7 @@ function LikeButton(props) {
             ></path>
           </svg>
         </span>
-        &nbsp;已赞同 {props.agreeCnt+1}
+        &nbsp;已赞同 {props.agreeCnt + 1}
       </button>
     );
   }
@@ -56,26 +56,26 @@ function LikeButton(props) {
 }
 
 export default function StoryCard(props) {
-  function getType(){
-    if (props.data.type=="News"){
+  function getType() {
+    if (props.data.type == "News") {
       return "none";
-    }else{
+    } else {
       return "block";
     }
   }
 
-  useEffect(() => {
-    
-  });
+  useEffect(() => {});
 
   return (
     <div className={styles.card}>
       <div className={styles.feed}>
         <div className={styles.title}>
-          <a href="">{props.data.question}</a>
+          <Link href={"secondary/" + props.data.key}>
+            <a href="">{props.data.question}</a>
+          </Link>
         </div>
         <div className={styles.content}>
-          <div className={styles.contentPic} style={{display : getType()}}>
+          <div className={styles.contentPic} style={{ display: getType() }}>
             <div className={styles.contentPicInner}>
               <img src={props.data.imgUrl} alt="cover"></img>
             </div>
@@ -87,7 +87,7 @@ export default function StoryCard(props) {
           </div>
           <div className={styles.contentActions}>
             <span>
-              <LikeButton agreeCnt={props.data.agreeCnt}/>
+              <LikeButton agreeCnt={props.data.agreeCnt} />
               <button type="button" className={styles.disagreeBtn}>
                 <span
                   style={({ display: "inline-flex" }, { alignItems: "center" })}

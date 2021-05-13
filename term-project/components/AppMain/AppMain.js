@@ -20,11 +20,11 @@ export default function AppMain() {
   return (
     <main role="main" className={styles.AppMain}>
       <div className={styles.TopStoryMain}>
-          {state.list.map((i)=>{
-              return(
-                <StoryCard data={i} />        
-              );
-          })}
+        {state.list.map((i) => {
+          return (
+                <StoryCard data={i} />
+          );
+        })}
       </div>
     </main>
   );
