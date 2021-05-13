@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 import TopBar from "../../components/TopBar/TopBar";
 
@@ -11,7 +12,11 @@ export default function Home() {
     list: [],
   });
 
+  const router = useRouter();
+  const { id } = router.query;
+
   useEffect(() => {
+    
     fetch("/api/news").then(async (res) => {
       const resp = await res.json();
       setState({
@@ -21,11 +26,9 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <div >
+      <div>
         <TopBar></TopBar>
-        <Article></Article>
+        <Article data={state.list[id - '0']}></Article>
       </div>
-    </>
   );
 }

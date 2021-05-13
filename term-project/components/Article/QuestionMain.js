@@ -1,7 +1,7 @@
 import ActionContent from "./ActionContent";
 import styles from "./QuestionMain.module.css";
 
-export function AnsUser() {
+export function AnsUser(props) {
   return (
     <div className={styles.ansUser}>
       <div className={styles.userContent}>
@@ -13,12 +13,12 @@ export function AnsUser() {
         <div className={styles.AuthorInfo}>
           <div className={styles.AuthorInfoHeader}>
             <span className={styles.AuthorInfoName}>
-              <a className={styles.userLink}>蓝猫</a>
+              <a className={styles.userLink}>{props.user}</a>
             </span>
           </div>
           <div className={styles.AuthorInfoDetail}>
             <div className={styles.AuthorInfoBadge}>
-              <div className={styles.AuthorInfoBadgeText}>网络工程师</div>
+              <div className={styles.AuthorInfoBadgeText}>{props.info}</div>
             </div>
           </div>
         </div>
@@ -27,22 +27,22 @@ export function AnsUser() {
   );
 }
 
-export function RichContent() {
+export function RichContent(props) {
   return (
     <div className={styles.richContent}>
       <div className={styles.richContentInner}>
-        <span className={styles.richText}>context</span>
+        <span className={styles.richText}>{props.secondary.richContent}</span>
       </div>
       <div>
         <div className={styles.contentTime}>
-          <span>编辑于 05-10</span>
+          <span>编辑于 {props.secondary.editTime}</span>
         </div>
       </div>
     </div>
   );
 }
 
-export function AnsComment() {
+export function AnsComment(props) {
   return (
     <>
       <div className={styles.commentOuter}>
@@ -54,12 +54,12 @@ export function AnsComment() {
               </a>
             </span>
             <span className={styles.cmtName}>
-              <a className={styles.cmtUserLInk}>海猫</a>
+              <a className={styles.cmtUserLInk}>{props.secondary.commentUser1}</a>
             </span>
-            <span className={styles.cmtTime}>10分钟前</span>
+            <span className={styles.cmtTime}>{props.secondary.commentTime1}</span>
           </div>
           <div className={styles.commentContent}>
-            <div className={styles.commentText}>太牛了</div>
+            <div className={styles.commentText}>{props.secondary.comment1}</div>
           </div>
         </div>
 
@@ -71,12 +71,12 @@ export function AnsComment() {
               </a>
             </span>
             <span className={styles.cmtName}>
-              <a className={styles.cmtUserLInk}>海猫</a>
+              <a className={styles.cmtUserLInk}>{props.secondary.commentUser2}</a>
             </span>
-            <span className={styles.cmtTime}>10分钟前</span>
+            <span className={styles.cmtTime}>{props.secondary.commentTime2}</span>
           </div>
           <div className={styles.commentContent}>
-            <div className={styles.commentText}>太拉了</div>
+            <div className={styles.commentText}>{props.secondary.comment2}</div>
           </div>
         </div>
         <button type="button" className={styles.InAppButton}>

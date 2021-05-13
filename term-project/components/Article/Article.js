@@ -4,30 +4,35 @@ import QuestionHeader from "./QuestionHeader";
 import { AnsComment, AnsUser, RichContent } from "./QuestionMain";
 import OtherQuestion from "./OtherQuestion";
 
-export default function Article() {
-  return (
-    <div className={styles.article}>
-      <div className={styles.Outer}>
-        <QuestionHeader></QuestionHeader>
-        <div className={styles.ansCard}>
-          <div className={styles.ansContentMain}>
-            <AnsUser></AnsUser>
+export default function Article(props) {
 
-            <RichContent></RichContent>
-            <ActionContent /*
-            commentsCnt={props.data.commentsCnt}
-            agreeCnt={props.data.agreeCnt} */
-            ></ActionContent>
-            <AnsComment></AnsComment>
+  
+  if (props.data != undefined) {
+    console.log(props);
+    return (
+      <div className={styles.article}>
+        <div className={styles.Outer}>
+          <QuestionHeader question={props.data.question}></QuestionHeader>
+          <div className={styles.ansCard}>
+            <div className={styles.ansContentMain}>
+              <AnsUser user={props.data.author} info={props.data.info}></AnsUser>
+              <RichContent secondary={props.data.secondary}></RichContent>
+              <ActionContent agreeCnt={props.data.agreeCnt} commentsCnt={props.data.commentsCnt}></ActionContent>
+              <AnsComment secondary={props.data.secondary}></AnsComment>
+            </div>
           </div>
+          <div className={styles.ViewAllCard}>
+            <button type="button" className={styles.ViewAllButton}>
+              查看全部 112 个回答
+            </button>
+          </div>
+          <OtherQuestion></OtherQuestion>
         </div>
-        <div className={styles.ViewAllCard}>
-          <button type="button" className={styles.ViewAllButton}>
-            查看全部 112 个回答
-          </button>
-        </div>
-        <OtherQuestion></OtherQuestion>
       </div>
-    </div>
-  );
+    );
+  }else{
+    return (
+      <div></div>
+    )
+  }
 }
