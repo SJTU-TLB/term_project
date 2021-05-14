@@ -39,9 +39,10 @@ input {
   padding: 0;
   border: 0;
   outline: none;
-  caret-color: rgba(0,0,0,0);
+  caret-color: rgba(0, 0, 0, 0);
 }
 body {
+  z-index: 0;
   position: relative;
   width: 100%;
   overflow-x: hidden;
@@ -86,4 +87,11 @@ button {
   border-style: outset;
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
   border-image: initial;
+}
+
+blockquote {
+  margin: 1.4em 0;
+  padding-left: 1em;
+  color: #646464;
+  border-left: 3px solid #d3d3d3;
 }

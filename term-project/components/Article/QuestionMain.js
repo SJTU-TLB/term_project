@@ -79,6 +79,21 @@ function Build(props) {
             </>
           );
         }
+        if (i.type == "h") {
+          return (
+            <>
+              <h2>{i.content}</h2>
+              <br></br>
+            </>
+          );
+        }
+        if (i.type == "blockquote") {
+          return (
+            <>
+              <blockquote>{i.content}</blockquote>
+            </>
+          );
+        }
       })}
     </>
   );

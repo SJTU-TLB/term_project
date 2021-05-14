@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import styles from "./AppMain.module.css";
 import StoryCard from "./StoryCard/StoryCard";
+import DownloadGuide from "../Download/DownloadGuide";
 
 export default function AppMain() {
   const [state, setState] = useState({
@@ -20,12 +21,11 @@ export default function AppMain() {
   return (
     <main role="main" className={styles.AppMain}>
       <div className={styles.TopStoryMain}>
-          {state.list.map((i)=>{
-              return(
-                <StoryCard data={i} />        
-              );
-          })}
+        {state.list.map((i) => {
+          return <StoryCard data={i} />;
+        })}
       </div>
+      <DownloadGuide></DownloadGuide>
     </main>
   );
 }
