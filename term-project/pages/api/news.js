@@ -6,7 +6,7 @@ export default (req, res) => {
     data: [
       {
         index: 0,
-        question: "如何优雅的完成前端课大作业？",
+        question: "如何优雅地完成前端课程大作业？",
         author: "许慎林",
         authorAvatar: "/avatars/author1.png",
         content: "在DDL的前一天新建文件夹就完事了",
@@ -17,7 +17,7 @@ export default (req, res) => {
         secondary: {
           richContent: [
             {
-              type: "p",
+              type: "b",
               content: "在DDL的前一天新建文件夹就完事了",
             },
             {
@@ -217,27 +217,129 @@ export default (req, res) => {
       },
       {
         index: 3,
-        question: "计算机系学生应该怎样正确管理自己的电脑？",
-        author: "牛岱",
+        question:
+          "强化学习（RL）是否是人工智能的关键之处，能够给人工智能带来质变？",
+        author: "贾扬清",
+        authorAvatar: "https://pic1.zhimg.com/332f2d9e4_xs.jpg?source=1940ef5c",
         content:
-          "看了很多答案，说的都是比如文件要分门别类，要做好备份之类的，我在这里给大家介绍一下我平时的电脑管理习惯。 为了更好的管理我们的各种应用包，最好使用包管理工具来进行各种包，软件的安装和使用。 ",
-        imgUrl:
-          "https://pic2.zhimg.com/50/v2-31bfe639fdc3b546b364f3885061551d_400x224.jpg",
-        agreeCnt: 6006,
-        commentsCnt: 180,
-        type: "OnePic",
+          "来泼下冷水，只要听见说“xxxx方法是否是人工智能的关键”，最可能的回答就是，不是。",
+        agreeCnt: 975,
+        commentsCnt: 55,
+        type: "News",
+        info: "机器学习话题下的优秀答主",
+        secondary: {
+          richContent: [
+            {
+              type: "p",
+              content:
+                "来泼下冷水，只要听见说“xxxx方法是否是人工智能的关键”，最可能的回答就是，",
+            },
+            {
+              type: "b",
+              content: "不是。",
+            },
+            {
+              type: "p",
+              content:
+                "请不要媒体说啥就是啥，人工智能是一个大集合，往往是各种方法的融会贯通才能达到最终的效果。",
+            },
+            {
+              type: "p",
+              content:
+                "举个例子，伯克利人工智能方向的博士生，入学一年以后资格考试要考这几个内容：",
+            },
+            {
+              type: "br",
+              content: "- 强化学习和Robotics",
+            },
+            {
+              type: "br",
+              content: "- 统计和概率图模型",
+            },
+            {
+              type: "br",
+              content: "- 计算机视觉和图像处理",
+            },
+            {
+              type: "br",
+              content: "- 核方法及其理论",
+            },
+            {
+              type: "br",
+              content:
+                "- 人工智能：一种现代方法中的其他方面（包括搜索，CSP，逻辑，planning，等等）",
+            },
+            {
+              type: "p",
+              content: "",
+            },
+            {
+              type: "p",
+              content:
+                "一个小时，两个教授随便出题，要求口试解答通过。挂两次的话，嘿嘿。（虽然真挂两次的不多）",
+            },
+            {
+              type: "p",
+              content:
+                "如果真的想做人工智能，建议都了解一下，不是说都要搞懂搞透，但是至少要达到开会的时候和人在poster前面谈笑风生不出错的程度吧。",
+            },
+            {
+              type: "p",
+              content:
+                "这些方向都渊源已久了，虽然你可能今天刚从新闻上看到强化学习，但是Sutton&Barto那本讲RL得书，已经是近20年以前的事情了，Q-learning那个时候就有。神经网络的一些基础理论，往前可以追溯到Hubel&Wiesel六七十年代对于视觉神经元的研究甚至更早，他们的研究还获得了1981年的诺贝尔奖。科研上的事情都不是忽然冒一个大新闻，都是无数科研工作者多年来不断推进的结果。",
+            },
+            {
+              type: "p",
+              content: "如果就想看个新闻看个热闹。。。那请当我没说。",
+            },
+          ],
+          editTime: "2016-03-25",
+          commentUser1: "凡心",
+          commentUser1Avatar: "https://pic4.zhimg.com/a73be6f94_s.jpg?source=06d4cd63",
+          commentTime1: "2016-03-25",
+          comment1: "都懒得理他们",
+          commentUser2: "请容我插一下嘴",
+          commentUser2Avatar: "https://pic4.zhimg.com/0d734d285_s.jpg?source=06d4cd63",
+          commentTime2: "2016-03-25",
+          comment2:
+            "没人评论? 不过我确实对藤校博士资格考试的内容很感兴趣诶，这个可以给很多自学机器学习的爱好者作为参考，答主还能再提供些相关信息吗，多谢了!",
+        },
       },
       {
         index: 4,
-        question: "计算机系学生应该怎样正确管理自己的电脑？",
-        author: "牛岱",
-        content:
-          "看了很多答案，说的都是比如文件要分门别类，要做好备份之类的，我在这里给大家介绍一下我平时的电脑管理习惯。 为了更好的管理我们的各种应用包，最好使用包管理工具来进行各种包，软件的安装和使用。 ",
-        imgUrl:
-          "https://pic2.zhimg.com/50/v2-31bfe639fdc3b546b364f3885061551d_400x224.jpg",
-        agreeCnt: 6006,
-        commentsCnt: 180,
-        type: "OnePic",
+        question: "马斯克发文称特斯拉暂停使用比特币支付，会对比特币带来什么影响？",
+        author: "性格如此",
+        authorAvatar: "https://pic2.zhimg.com/v2-cceff55bd211b4aec2aeae8781e4c189_xs.jpg?source=1940ef5c",
+        content: "我们来看一下这波下跌的引起原因是什么吧，很简单，特斯拉马斯克之前买过BTC，买完BTC的时候，马斯克说特斯拉可以接受BTC付款，BTC应声大涨，如今马斯克说拒绝BTC支付，BTC应声大跌，马斯克之前买的BTC在这波大跌之前应该已经清空了，如果再以更低的价格再买入，过两天再放出烟雾弹消息，这种情况，放证券市场里够判一辈子的了，所以大家不要神话马斯克这个人，这个人做的事情很没有底线，币圈只不过是他玩弄的资本。",
+        agreeCnt: 5571,
+        commentsCnt: 506,
+        type: "News",
+        info: "",
+        secondary: {
+          richContent: [
+            {
+              type: "p",
+              content: "我们来看一下这波下跌的引起原因是什么吧，很简单，特斯拉马斯克之前买过BTC，买完BTC的时候，马斯克说特斯拉可以接受BTC付款，BTC应声大涨，如今马斯克说拒绝BTC支付，BTC应声大跌，马斯克之前买的BTC在这波大跌之前应该已经清空了，如果再以更低的价格再买入，过两天再放出烟雾弹消息，这种情况，放证券市场里够判一辈子的了，所以大家不要神话马斯克这个人，这个人做的事情很没有底线，币圈只不过是他玩弄的资本。",
+            },
+            {
+              type: "p",
+              content: "就这很多人鼓吹去中心话技术如何如何牛逼、区块链如何如何牛逼，聪明人都知道这是资本割韭菜的最佳方法，甚至不用交税，但是有很多聪明人明知道是什么也会美名其曰说它的好，为什么，靠币圈吃饭，喝汤，我也是圈里人，既得利益者，币圈没什么道德法律底线，这是一个强者恒强的世界",
+            },
+            {
+              type: "p",
+              content: "项目方、交易所、大V、都是这个圈子的配套产业链，只有韭菜是真韭菜",
+            },
+          ],
+          editTime: "昨天 10:16",
+          commentUser1: "jiangGL",
+          commentUser1Avatar: "https://pic1.zhimg.com/179e6358367a39e6f20c303c6dd81210_s.jpg?source=06d4cd63",
+          commentTime1: "昨天 11:01",
+          comment1: "这不是证券市场，这是黑市，你奈何不了他[飙泪笑]",
+          commentUser2: "神秘博士DW",
+          commentUser2Avatar: "https://pic2.zhimg.com/v2-84d9417c7e481bf3df68ceb426761b5d_s.jpg?source=06d4cd63",
+          commentTime2: "昨天 11:29",
+          comment2: "什么理想，信仰，就tm为了钱",
+        },
       },
       {
         index: 5,

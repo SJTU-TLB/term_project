@@ -60,6 +60,24 @@ function Build(props) {
             </>
           );
         }
+        if (i.type == "b") {
+          return (
+            <>
+              <p>
+                <b>{i.content}</b>
+              </p>
+              <br></br>
+            </>
+          );
+        }
+        if (i.type == "br") {
+          return (
+            <>
+              {i.content}
+              <br></br>
+            </>
+          );
+        }
       })}
     </>
   );
