@@ -155,7 +155,7 @@ export function AnsComment(props) {
             <div className={styles.commentText}>{props.secondary.comment2}</div>
           </div>
         </div>
-        <button type="button" className={styles.InAppButton}>
+        <button className={styles.InAppButton}>
           打开 App 查看更多评论
         </button>
       </div>

@@ -1,17 +1,18 @@
 import { useEffect } from "react";
 import styles from "./TopBar.module.css";
+import Link from "next/link";
 
 export default function TopBar() {
   useEffect(() => {
     var elemScrollPos;
-    window.addEventListener("scroll",function(){
+    window.addEventListener("scroll", function () {
       elemScrollPos = document.documentElement.scrollTop;
-      if (elemScrollPos>50){
-        document.getElementById("topBarContainer").style.display="none";
-      }else{
-        document.getElementById("topBarContainer").style.display="block";
+      if (elemScrollPos > 50) {
+        document.getElementById("topBarContainer").style.display = "none";
+      } else {
+        document.getElementById("topBarContainer").style.display = "block";
       }
-    })
+    });
   });
 
   return (
@@ -44,7 +45,9 @@ export default function TopBar() {
               placeholder="成都49中一学生坠亡"
             ></input>
           </label>
-          <a className={styles.downloadLink}>下载 App</a>
+          <Link href="/download">
+            <a className={styles.downloadLink}>下载 App</a>
+          </Link>
           <div className={styles.moreIcon}>
             <span className="expandBtn" height="24px">
               <svg
