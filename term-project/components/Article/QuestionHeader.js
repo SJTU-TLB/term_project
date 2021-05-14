@@ -7,7 +7,7 @@ export default function QuestionHeader(props) {
 
       <div className={styles.QuestionHeadContent}>
           <div className={styles.QuestionHeadTitle}>
-            <a href="/question/455019826">{props.question}</a>
+            <a>{props.question}</a>
           </div>
         </div>
     </>

@@ -1,6 +1,7 @@
 import ActionContent from "./ActionContent";
 import styles from "./QuestionMain.module.css";
 import React, { useState } from "react";
+import Link from "next/link";
 
 export function AnsUser(props) {
   return (
@@ -155,9 +156,9 @@ export function AnsComment(props) {
             <div className={styles.commentText}>{props.secondary.comment2}</div>
           </div>
         </div>
-        <button className={styles.InAppButton}>
-          打开 App 查看更多评论
-        </button>
+        <Link href="/download">
+          <a className={styles.InAppButton}>打开 App 查看更多评论</a>
+        </Link>
       </div>
     </>
   );
