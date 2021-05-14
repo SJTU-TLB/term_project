@@ -28,7 +28,7 @@ export default function Home() {
   return (
       <div>
         <TopBar></TopBar>
-        <Article data={state.list[id - '0']}></Article>
+        <Article data={state.list[Number(id)]}></Article>
       </div>
   );
 }
