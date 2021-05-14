@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import TopBar from "../../components/TopBar/TopBar";
-
-import QuestionHeader from "../../components/Article/QuestionHeader";
-import { ActionContent } from "../../components/Article/ActionContent";
 import Article from "../../components/Article/Article";
 
 export default function Home() {
