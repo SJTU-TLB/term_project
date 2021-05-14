@@ -1,6 +1,5 @@
 import ActionContent from "./ActionContent";
 import styles from "./QuestionMain.module.css";
-import Image from "next/image";
 import React, { useState } from "react";
 
 export function AnsUser(props) {
@@ -9,7 +8,7 @@ export function AnsUser(props) {
       <div className={styles.userContent}>
         <span>
           <a>
-            <Image
+            <img
               className={styles.avatar}
               src={props.avatar}
               width="38"
@@ -52,10 +51,13 @@ function Build(props) {
         }
         if (i.type == "img") {
           return (
-            <img
-              style={({ display: "block" }, { maxWidth: "100%" })}
-              src={i.content}
-            />
+            <>
+              <img
+                style={({ display: "block" }, { maxWidth: "100%" })}
+                src={i.content}
+              />
+              <br></br>
+            </>
           );
         }
       })}
@@ -64,8 +66,6 @@ function Build(props) {
 }
 
 export function RichContent(props) {
-
-
   return (
     <div className={styles.richContent}>
       <div className={styles.richContentInner}>
@@ -90,7 +90,7 @@ export function AnsComment(props) {
           <div className={styles.commentUser}>
             <span className={styles.cmtAvatar}>
               <a className={styles.cmtUserLInk}>
-                <Image
+                <img
                   className={styles.cmtAvatarImg}
                   src={props.secondary.commentUser1Avatar}
                   width="24"
@@ -116,7 +116,7 @@ export function AnsComment(props) {
           <div className={styles.commentUser}>
             <span className={styles.cmtAvatar}>
               <a className={styles.cmtUserLInk}>
-                <Image
+                <img
                   className={styles.cmtAvatarImg}
                   src={props.secondary.commentUser2Avatar}
                   width="24"
