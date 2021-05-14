@@ -7,16 +7,22 @@ export default function DownloadGuide() {
     var elemScrollPos;
     window.addEventListener("scroll", function () {
       elemScrollPos = document.documentElement.scrollTop;
-      if (elemScrollPos > 1720) {
-        document.getElementById("guider").className =
-          styles.downloadGuideWrapperActive;
-        document.getElementById("inner").className =
-          styles.downloadGuideInnerActive;
-        document.getElementById("bg").className = styles.downloadGuideBgActive;
-      } else {
-        document.getElementById("guider").className = styles.downloadGuideWrapper;
-        document.getElementById("inner").className = styles.downloadGuideInner;
-        document.getElementById("bg").className = styles.downloadGuideBg;
+
+      if (document.getElementById("guider") != null) {
+        if (elemScrollPos > 1720) {
+          document.getElementById("guider").className =
+            styles.downloadGuideWrapperActive;
+          document.getElementById("inner").className =
+            styles.downloadGuideInnerActive;
+          document.getElementById("bg").className =
+            styles.downloadGuideBgActive;
+        } else {
+          document.getElementById("guider").className =
+            styles.downloadGuideWrapper;
+          document.getElementById("inner").className =
+            styles.downloadGuideInner;
+          document.getElementById("bg").className = styles.downloadGuideBg;
+        }
       }
     });
   });
