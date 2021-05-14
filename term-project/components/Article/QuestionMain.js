@@ -1,4 +1,3 @@
-import ActionContent from "./ActionContent";
 import styles from "./QuestionMain.module.css";
 import React, { useState } from "react";
 import Link from "next/link";
