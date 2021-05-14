@@ -1,4 +1,4 @@
-import { ActionContent } from "./ActionContent";
+import { ActionContent } from "../AppMain/StoryCard/StoryCard";
 import styles from "./Article.module.css";
 import QuestionHeader from "./QuestionHeader";
 import { AnsComment, AnsUser, RichContent } from "./QuestionMain";
