@@ -1,0 +1,32 @@
+.hotSearchItem{
+    margin-bottom: 20px;
+    width: calc(50vw - 12px);
+    display: flex;
+}
+
+.hotSearchIndex{
+    color: #ff942d;
+    font-size: 15px;
+    width: 18px;
+    height: 18px;
+}
+
+.hotSearchItemText{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.hotSearchTitle{
+    font-size: 15px;
+    color: #121212;
+}
+
+.hotSearchDesc{
+    margin-top: 6px;
+    font-size: 13px;
+    color: #999;
+}
